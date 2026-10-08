@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SIMAS Yayasan - custom */
+html, body { margin: 0; padding: 0; }
+body { overscroll-behavior: none; font-family: Inter, system-ui, sans-serif; background: #f9f9ff; color: #111c2d; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #cfdaf2; border-radius: 99px; }
+.font-jakarta { font-family: "Plus Jakarta Sans", Inter, sans-serif; }
+.card { background: #fff; border-radius: .75rem; box-shadow: 0 1px 8px rgba(0,0,0,.04); }
+.nav-active { background: #0f5132 !important; color: #fff !important; font-weight: 600; }
+.nav-active .material-symbols-outlined { color: #fff !important; }
+.toast { animation: slideIn .25s ease; }
+@keyframes slideIn { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media print { .no-print { display: none !important; } aside, header { display: none !important; } .print-area { margin: 0 !important; padding: 0 !important; } }
+.table-wrap { overflow-x: auto; }
+input, select, textarea { outline: none; }
+input:focus, select:focus, textarea:focus { box-shadow: 0 0 0 2px #00382033; }
+dialog::backdrop { background: rgba(17,28,45,.45); backdrop-filter: blur(2px); }
+dialog { border: none; }

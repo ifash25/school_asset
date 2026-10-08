@@ -1,44 +1,31 @@
-# SIMAS Yayasan — Sistem Informasi Manajemen Aset
+# SIMAS Yayasan — React + Vite
 
-Aplikasi website inventaris aset multi-unit Yayasan Pendidikan Islam
-(Executive Dashboard Konsolidasi + modul operasional).
+Migrasi dari HTML statis + Tailwind CDN ke React 18 + Vite + Tailwind + React Router.
 
-## Cara Menjalankan
-Tidak perlu build. Cukup buka file:
-```
-index.html
-```
-via Live Server VS Code atau server statis apapun:
-```
-npx serve .
-python -m http.server 8000
+## Jalankan
+
+```bash
+npm install
+npm run dev
 ```
 
-## Struktur
+Buka `http://localhost:5173` lalu login dengan akun demo:
+superadmin / yayasan123, admin.smk / smk123, admin.sd / sd123,
+kepsek.smp / smp123, pj.lab / pj123.
+
+## Struktur src
+
+```text
+src/main.jsx            -> entry Vite + HashRouter
+src/App.jsx             -> routing semua menu
+src/lib/auth.js         -> RBAC, sesi, lokasi (migrasi auth.js)
+src/lib/store.js        -> seed + localStorage + KPI (migrasi store.js)
+src/lib/AppContext.jsx  -> state global + toast
+src/components/        -> Layout, Sidebar, Header, Guard, Modals
+src/pages/             -> Login, Dashboard, Katalog, Layanan, Audit,
+                          Depresiasi, Pengaturan, Bantuan
 ```
-index.html              -> SPA (Dashboard, Katalog, Layanan, Audit, Depresiasi, Pengaturan, Bantuan)
-assets/css/app.css      -> custom style + token spacing Material3
-assets/js/store.js      -> data seed + localStorage + agregasi
-assets/js/app.js        -> layout, routing, dashboard render, modul CRUD
-```
 
-## Fitur Dashboard
-- Filter konteks unit (Semua/Yayasan/SMK/SMP/SD/TK/RQ) — semua KPI & grafik ikut berubah
-- Search aset live, notifikasi, export PDF/XLSX/Cetak
-- Tambah Aset + Scan QR (modal fungsional, tersimpan di localStorage)
-- Toggle Nilai vs Kuantitas, tabel peringatan dengan aksi, donut status, log aktivitas
+Folder lama `assets/js/*.js`, `login.html`, dan `Design/` tetap ada
+sebagai arsip dan tidak dipakai oleh build Vite.
 
-## Login & RBAC
-Mulai dari `login.html` (otomatis bila belum ada sesi).
-| Username | Sandi | Peran | Unit |
-|---|---|---|---|
-| superadmin | yayasan123 | Super Admin Yayasan | Semua |
-| admin.smk | smk123 | Admin Unit | SMK IT |
-| admin.sd | sd123 | Admin Unit | SD IT |
-| kepsek.smp | smp123 | Kepsek / Auditor | SMP IT |
-| pj.lab | pj123 | PJ Ruangan | Lab SMK |
-
-- Non-Super Admin: konteks unit dikunci pada unitnya, menu difilter per peran, route terproteksi.
-- Registrasi aset butuh `aset.create`; tombol Buat BA butuh `disposal.approve` (PJ hanya mendapat pesan pengajuan).
-- Menu Pengaturan & RBAC (Super Admin): kelola pengguna, matriks akses 7 menu × 4 peran, pohon lokasi 6 kampus.
-- Sesi: `localStorage simas_session_v1`. Keluar via ikon logout di header.
