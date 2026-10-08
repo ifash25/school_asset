@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.gstatic.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#b0f1c7", "on-secondary-fixed": "#2f1500", "surface-tint": "#2d6a48", "secondary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#6bd8cb", "surface-bright": "#f9f9ff", "primary-container": "#0f5132", "on-surface": "#111c2d", "surface-container-highest": "#d8e3fb", "error-container": "#ffdad6", "on-error": "#ffffff", "surface": "#f9f9ff", "primary": "#003820", "on-primary-container": "#84c39b", "background": "#f9f9ff", "secondary-fixed": "#ffdcc3", "inverse-surface": "#263143", "tertiary": "#003732", "surface-container-low": "#f0f3ff", "on-primary-fixed-variant": "#0f5132", "on-secondary": "#ffffff", "surface-dim": "#cfdaf2", "inverse-on-surface": "#ecf1ff", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#89f5e7", "outline-variant": "#c0c9c0", "outline": "#707971", "on-secondary-container": "#663500", "error": "#ba1a1a", "on-tertiary-container": "#58c6b9", "surface-variant": "#d8e3fb", "on-tertiary-fixed-variant": "#005049", "inverse-primary": "#95d4ac", "on-surface-variant": "#404942", "on-background": "#111c2d", "secondary": "#904d00", "tertiary-container": "#005049", "on-primary-fixed": "#002111", "on-primary": "#ffffff", "on-tertiary-fixed": "#00201d", "secondary-container": "#fe932c", "surface-container": "#e7eeff", "on-secondary-fixed-variant": "#6e3900", "on-error-container": "#93000a", "primary-fixed-dim": "#95d4ac", "surface-container-high": "#dee8ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-md": "0.75rem", "margin-desktop": "2rem", "gutter": "1rem", "space-2xl": "2rem", "space-sm": "0.5rem", "margin": "1rem", "space-lg": "1rem" }, fontFamily: { "body-md": ["Inter"], "data-mono": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "display-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "title-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "data-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase text-primary-container tracking-wider">YAYASAN</span></div><div class="flex items-center gap-space-xs pl-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-surface-tint">wifi</span><span class="font-data-mono text-data-mono uppercase text-on-surface-variant">ONLINE</span></div></div><div class="flex items-center gap-space-sm"><h1 class="font-headline-md text-headline-md text-on-surface hidden">Audit Session Setup</h1><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Top Background Ambient Wash (Institutional Precision) -->
+<div class="px-gutter pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<!-- 1. Auditor Profile & Device Readiness Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A dignified Indonesian Islamic scholar and professional inventory auditor wearing a neat batik shirt and black peci cap, smiling warmly with clean studio lighting and soft emerald ambient backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtXUFMKu6OMAvmQDouxC_P94YFVzZErlUZMs06Otr5eXwDeCqMTnK7FYkiIoERpRi8qwaPVpWniM7rtvA1SOQMrHHILnkv1RENOMgLq1lYuhw7K8fbe9wVr6_5Uo4Xd716aSw3c1F1mEu7kxxmVnQHZFFHWF3z9NepH-UyV_F2wPgl00Dd9tWnFa0tJs4K64yrVzz5gjN4G6Pd4gs_7-ySlk2T2khICEJmh1mA-xo"/>
+</div>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Ust. Ahmad Fauzi</h2>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Terverifikasi</span>
+</div>
+<p class="font-data-mono text-data-mono text-on-surface-variant truncate">NIP. 202108 • Tim Sensus Genap</p>
+</div>
+</div>
+<button aria-label="Refresh Database Master" class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+<!-- Device Sync & Offline Diagnostic Capsule -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-surface-tint text-[16px] shrink-0">cloud_done</span>
+<div class="flex items-center gap-space-xs truncate">
+<span class="font-label-sm text-label-sm text-on-surface">Basis Data Master Siap</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">520 Aset Cached</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-2 py-0.5 rounded-full shrink-0 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">OFFLINE OK</span>
+</div>
+</div>
+</div>
+<!-- 2. Section Heading -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">assignment_turned_in</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Pilih Sesi &amp; Lokasi Sensus</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tentukan jadwal aktif dan unit sasaran pemeriksaan fisik barang hari ini.</p>
+</div>
+<!-- 3. Active Audit Campaign Cards -->
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: ACTIVE / PRIMARY SELECTED -->
+<div class="session-card bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md relative overflow-hidden transition-all" data-session-id="SMP-02">
+<!-- Top Institutional Brand Accent Edge -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-xs pt-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Sesi Berjalan</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Prioritas Tinggi</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant uppercase tracking-wider">SO-SMP-2025-GENAP-02</span>
+</div>
+<!-- Campus Unit Identification & Visual Snippet -->
+<div class="flex gap-space-md items-center">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern Islamic middle school academic wing, clean architectural exterior with lush green courtyard trees, symmetrical windows, soft morning light in an Indonesian campus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp8WStOPgP8uw1abZ7zPKKoXY6wHBzxO6FKw7PNK4sq2156gvx7VXpEUCwZZ9xPA3uVPM9jI_NepZq2tc_b1D9s_CMSKNQyUrVV9zrRHLsFxYhhccgrVGpcvAOt4B3JeJXfltCrnIFqh0OK8yXVg4o4lA-QLaE2yEXqd4qwgDh0MskpK7KL0wGiAoQZbcKSuxvrSyDpQesjkjL019iGoSMr7818lK5fANoR2x1-l8"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">SMP IT</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">SMP IT Insan Kamil</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Kampus 2 Putri • Gedung B</p>
+<p class="font-data-mono text-data-mono text-surface-tint truncate">Lab IPA, R. Guru, Multimedia, Puspa</p>
+</div>
+</div>
+<!-- Audit Progress Metrics with SVG Radial & Stats -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<!-- Inline SVG Circular Progress (92.7%) -->
+<div class="relative w-11 h-11 shrink-0 flex items-center justify-center">
+<svg class="w-11 h-11 -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-surface-container-highest" cx="18" cy="18" fill="none" r="14" stroke-width="3"></circle>
+<circle class="stroke-primary-container" cx="18" cy="18" fill="none" r="14" stroke-dasharray="87.96" stroke-dashoffset="6.42" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<span class="absolute font-data-mono text-[10px] font-semibold text-primary-container">93%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">482 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ 520 Aset</span></span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold">Telah Terverifikasi Lapangan</span>
+</div>
+</div>
+<div class="flex flex-col items-end text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Tenggat</span>
+<span class="font-data-mono text-data-mono font-medium text-on-surface">28 Feb 2025</span>
+</div>
+</div>
+<!-- Active Room Quick Peek Strip -->
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant pt-0.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-surface-tint">group</span>
+<span>3 Auditor (U. Ahmad, U. Rizal, U. Fitri)</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">38 Tersisa</span>
+</div>
+<!-- Action Button Inside Primary Card -->
+<button class="w-full bg-primary-container text-on-primary py-space-sm px-space-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm active:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+<span>Pilih &amp; Mulai Pindai Ruangan</span>
+</button>
+</div>
+<!-- Card 2: SCHEDULED / UPCOMING -->
+<div class="session-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md opacity-95 transition-all" data-session-id="SMK-01">
+<div class="flex items-start justify-between gap-space-xs">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Jadwal Berikutnya</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant uppercase tracking-wider">SO-SMK-2025-GENAP-01</span>
+</div>
+<div class="flex gap-space-md items-center">
+<div class="w-14 h-14 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="High school technical computer robotics laboratory, electronics workbenches with equipment organized neatly, ambient educational daylight interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt_yJBfG3ABJLkt7GVctxOmyi_F7zPpI5hPtHytUD77qewVfBt1Zo01093g0lG3Zi78WNYbusDFnRo_nET3pY0f3H1gEpkzCuBWj6zJh_211GtmKboKU7fAS5E4jJB4JVsn9i-_mXDDOnl7itrKBJ6kEmRqCqn2Ub-PPjljZelXbAFSYzxFw9qMgHOxEhvch4Zuy2mt7rl191y_169Bnz1CumiiRrCLq44wseVX4o"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">SMK IT</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">SMK IT Bina Insani</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Gedung Umar bin Khattab</p>
+<p class="font-data-mono text-data-mono text-on-surface-variant truncate">Bengkel TKJ &amp; Lab Robotik • 342 Aset</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">pending_actions</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Menunggu Pengesahan BA Awal</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Mulai 03 Mar</span>
+</div>
+<button class="w-full bg-surface-container-high text-on-surface py-2 px-space-md rounded-lg font-label-md text-label-md flex items-center justify-center gap-space-xs active:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Lihat Detail Sesi</span>
+</button>
+</div>
+<!-- Card 3: COMPLETED / RECONCILED -->
+<div class="session-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm opacity-85" data-session-id="RQ-03">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Rumah Qur'an</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase">Selesai 100%</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant uppercase tracking-wider">SO-RQ-2025-GENAP-03</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Rumah Qur'an (RQ) Tahfiz Pusat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Asrama Santri &amp; Aula Al-Jazari • 186 Aset</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Rekonsiliasi Selesai: 24 Jan 2025</span>
+<span class="text-primary-container font-semibold">Arsip BA Telah Terbit</span>
+</div>
+</div>
+</div>
+<!-- 4. Opsi Penugasan Tambahan (Special Operations & Toolkit) -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Aksi Operasional Cepat</h4>
+<!-- Incident / Unregistered Asset Fast Log -->
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed p-space-md rounded-xl shadow-sm flex items-center justify-between active:scale-[0.99] transition-transform text-left" type="button">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">add_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-secondary-fixed">Sensus Darurat / Aset Tanpa Label</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Lapor cepat temuan fisik barang di luar daftar master</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">chevron_right</span>
+</button>
+<!-- Offline Package & QR Sheet Cache Export -->
+<button class="w-full bg-surface-container-low text-on-surface p-space-md rounded-xl flex items-center justify-between active:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-surface-tint flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Unduh Lembar Periksa Offline</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Format PDF ringkas &amp; cetak barcode cadangan unit SMP</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- 5. Fixed Tactile Bottom Floating Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-gutter bg-surface/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.06)] z-40">
+<div class="max-w-md mx-auto flex flex-col gap-1">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Ruangan Target Terdekat:</span>
+<span class="font-data-mono text-data-mono text-primary-container font-semibold">Gedung B • Lt. 2</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-space-md px-space-lg rounded-xl font-headline-md text-headline-md flex items-center justify-between shadow-lg active:scale-[0.98] transition-transform" id="btnProceedToRoom" type="button">
+<div class="flex items-center gap-space-sm text-left">
+<span class="material-symbols-outlined text-[24px]">meeting_room</span>
+<div class="flex flex-col leading-tight">
+<span>Masuk ke Pemeriksaan</span>
+<span class="font-label-sm text-label-sm font-normal text-on-primary-container">Lab IPA Terpadu (SMP IT)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction for active session card selection
+  const sessionCards = document.querySelectorAll('.session-card');
+  const proceedBtn = document.getElementById('btnProceedToRoom');
+
+  sessionCards.forEach(card => {
+    card.addEventListener('click', () => {
+      // De-highlight all
+      sessionCards.forEach(c => {
+        c.classList.remove('ring-2', 'ring-primary-container', 'shadow-md');
+        c.classList.add('shadow-sm');
+      });
+      // Highlight targeted
+      card.classList.add('shadow-md');
+      
+      const sessionId = card.getAttribute('data-session-id');
+      if (sessionId === 'SMP-02') {
+        proceedBtn.innerHTML = `
+          <div class="flex items-center gap-space-sm text-left">
+            <span class="material-symbols-outlined text-[24px]">meeting_room</span>
+            <div class="flex flex-col leading-tight">
+              <span>Masuk ke Pemeriksaan</span>
+              <span class="font-label-sm text-label-sm font-normal text-on-primary-container">Lab IPA Terpadu (SMP IT)</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+        `;
+        proceedBtn.classList.remove('opacity-60');
+      } else if (sessionId === 'SMK-01') {
+        proceedBtn.innerHTML = `
+          <div class="flex items-center gap-space-sm text-left">
+            <span class="material-symbols-outlined text-[24px]">lock_clock</span>
+            <div class="flex flex-col leading-tight">
+              <span>Pratinjau Jadwal SMK</span>
+              <span class="font-label-sm text-label-sm font-normal text-on-primary-container">Belum Dibuka (BA Pending)</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[24px]">visibility</span>
+        `;
+      } else if (sessionId === 'RQ-03') {
+        proceedBtn.innerHTML = `
+          <div class="flex items-center gap-space-sm text-left">
+            <span class="material-symbols-outlined text-[24px]">inventory_2</span>
+            <div class="flex flex-col leading-tight">
+              <span>Buka Arsip Audit RQ</span>
+              <span class="font-label-sm text-label-sm font-normal text-on-primary-container">Status Selesai 100%</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[24px]">archive</span>
+        `;
+      }
+    });
+  });
+</script></main></body></html>

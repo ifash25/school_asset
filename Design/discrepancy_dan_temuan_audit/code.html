@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>SIMAS Yayasan - Mobile Audit Shell</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#003820", "on-primary": "#ffffff", "on-primary-fixed-variant": "#0f5132", "on-secondary": "#ffffff", "inverse-surface": "#263143", "secondary-fixed-dim": "#ffb77d", "primary-fixed": "#b0f1c7", "error": "#ba1a1a", "on-error": "#ffffff", "on-secondary-fixed-variant": "#6e3900", "surface-dim": "#cfdaf2", "on-error-container": "#93000a", "on-surface-variant": "#404942", "tertiary-fixed": "#89f5e7", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-primary-container": "#84c39b", "on-secondary-fixed": "#2f1500", "secondary-container": "#fe932c", "tertiary-container": "#005049", "primary-fixed-dim": "#95d4ac", "on-surface": "#111c2d", "tertiary": "#003732", "surface-tint": "#2d6a48", "primary-container": "#0f5132", "background": "#f9f9ff", "on-tertiary-fixed": "#00201d", "inverse-on-surface": "#ecf1ff", "surface-bright": "#f9f9ff", "on-primary-fixed": "#002111", "outline-variant": "#c0c9c0", "tertiary-fixed-dim": "#6bd8cb", "secondary-fixed": "#ffdcc3", "surface-container": "#e7eeff", "on-tertiary": "#ffffff", "secondary": "#904d00", "surface-variant": "#d8e3fb", "on-tertiary-fixed-variant": "#005049", "inverse-primary": "#95d4ac", "on-background": "#111c2d", "surface": "#f9f9ff", "on-secondary-container": "#663500", "surface-container-highest": "#d8e3fb", "on-tertiary-container": "#58c6b9", "outline": "#707971", "surface-container-low": "#f0f3ff", "surface-container-high": "#dee8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-2xl": "2rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-lg": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "0.75rem", "space-xl": "1.5rem", "margin": "1rem" }, "fontFamily": { "display-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "data-mono": ["Inter"], "title-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"] }, "fontSize": { "display-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "data-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 500,'GRAD' 0,'opsz' 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter flex flex-col justify-center"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">verified</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-primary tracking-tight truncate">SIMAS Audit</span><span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary text-[10px] font-semibold tracking-wider uppercase">Field</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[14px]">inventory_2</span><span class="font-data-mono text-data-mono text-on-surface-variant font-medium truncate">SO-SMP-2025-GENAP-02</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full" title="Sync Status"><span class="material-symbols-outlined text-primary text-[14px]">cloud_done</span><span class="material-symbols-outlined text-secondary text-[14px]">battery_5_bar</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">92%</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter space-y-space-md">
+<!-- Top Institutional Summary Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Amanah Inventaris</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight mt-0.5">Ringkasan Selisih &amp; Temuan Opname</h1>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm shrink-0">SMP IT</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-data-mono text-data-mono mb-space-md">
+<span class="material-symbols-outlined text-[15px] text-primary">domain</span>
+<span class="truncate">SMP IT Insan Kamil • SO-SMP-2025-GENAP-02</span>
+</div>
+<!-- Quick Metric Pills -->
+<div class="grid grid-cols-3 gap-space-xs">
+<!-- Pindah Ruang -->
+<div class="flex flex-col items-center justify-center p-space-xs bg-secondary-fixed/20 rounded-lg text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-secondary-fixed-variant leading-none">5</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-1">Pindah Ruang</span>
+</div>
+<!-- Kondisi Rusak -->
+<div class="flex flex-col items-center justify-center p-space-xs bg-error-container/30 rounded-lg text-center">
+<span class="font-headline-md text-headline-md font-bold text-error leading-none">2</span>
+<span class="font-label-sm text-label-sm text-on-error-container font-medium mt-1">Kondisi Rusak</span>
+</div>
+<!-- Belum Ditemukan -->
+<div class="flex flex-col items-center justify-center p-space-xs bg-surface-container-high rounded-lg text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface-variant leading-none">38</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium mt-1">Belum Terdata</span>
+</div>
+</div>
+</div>
+<!-- Interactive Segment Bar -->
+<div class="flex items-center p-1 bg-surface-container-high rounded-lg overflow-x-auto gap-1" id="filterTabGroup">
+<button class="tab-btn flex-1 py-1.5 px-2 rounded font-label-md text-label-md text-center transition-all bg-surface-container-lowest text-primary shadow-xs font-semibold whitespace-nowrap" onclick="filterDiscrepancy('all', this)" type="button">
+      Semua (45)
+    </button>
+<button class="tab-btn flex-1 py-1.5 px-2 rounded font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface whitespace-nowrap" onclick="filterDiscrepancy('pindah', this)" type="button">
+      Pindah (5)
+    </button>
+<button class="tab-btn flex-1 py-1.5 px-2 rounded font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface whitespace-nowrap" onclick="filterDiscrepancy('rusak', this)" type="button">
+      Rusak (2)
+    </button>
+<button class="tab-btn flex-1 py-1.5 px-2 rounded font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-on-surface whitespace-nowrap" onclick="filterDiscrepancy('belum', this)" type="button">
+      Hilang (38)
+    </button>
+</div>
+<!-- List Kartu Temuan Lapangan -->
+<div class="space-y-space-md" id="cardsContainer">
+<!-- Kartu 1: Pindah Ruang (Epson EB-E500) -->
+<div class="item-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm transition-all" data-category="pindah">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-data-mono text-data-mono font-semibold text-primary truncate">YYS-SMP-PRJ-004</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm shrink-0 font-medium">Mutasi Fisik</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Proyektor Epson EB-E500</h2>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horiz</span>
+</div>
+</div>
+<!-- Rute Pemindahan -->
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-1.5">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">location_off</span>
+<span class="line-through truncate">Lab Komputer Gedung C</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<span class="truncate">Ditemukan di: Ruang Guru SMP</span>
+</div>
+</div>
+<div class="flex items-start gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">hourglass_top</span>
+<span class="line-clamp-2">Menunggu Persetujuan Mutasi oleh Kepala Lab Komputer (Ust. Rahmat).</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-dim font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+          Lihat Detail
+        </button>
+<button class="h-9 px-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Validasi Ulang
+        </button>
+</div>
+</div>
+<!-- Kartu 2: Pindah Ruang (Kursi Ergonomis Guru) -->
+<div class="item-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm transition-all" data-category="pindah">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-data-mono text-data-mono font-semibold text-primary truncate">YYS-SMP-MEB-031</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm shrink-0 font-medium">4 Unit Lot</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">4 Unit Kursi Ergonomis Guru</h2>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">chair</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-1.5">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">meeting_room</span>
+<span class="line-through truncate">Lab Bahasa (Lt. 2)</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<span class="truncate">Ditemukan di: Perpustakaan Utama</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">schedule</span>
+<span class="truncate">Dipindahkan Sementara untuk Persiapan Akreditasi.</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-dim font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">info</span>
+          Lihat Detail
+        </button>
+<button class="h-9 px-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center justify-center gap-1 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+          Setujui Pinjam
+        </button>
+</div>
+</div>
+<!-- Kartu 3: Kondisi Rusak (AC Daikin Inverter) -->
+<div class="item-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm transition-all" data-category="rusak">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-data-mono text-data-mono font-semibold text-error truncate">YYS-SMP-AC-012</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm shrink-0 font-medium">Rusak Ringan</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">AC Daikin Inverter 2 PK FTKQ50</h2>
+</div>
+<div class="w-8 h-8 rounded-lg bg-error-container/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[20px]">build_circle</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="truncate">Lab Komputer Gedung C (Blok Barat)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-error-container/20 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-semibold uppercase tracking-wider">Catatan Kerusakan:</span>
+<p class="font-body-sm text-body-sm text-on-surface">Freon bocor &amp; motor fan outdoor berisik. Butuh servis segera oleh teknisi CV Sejuk Abadi.</p>
+</div>
+<div class="pt-1">
+<button class="w-full h-9 px-space-sm rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors shadow-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+          + Buat Tiket Servis Cepat
+        </button>
+</div>
+</div>
+<!-- Kartu 4: Belum Terpindai (Mixer Yamaha MG16XU) -->
+<div class="item-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-sm transition-all" data-category="belum">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-data-mono text-data-mono font-semibold text-on-surface-variant truncate">YYS-SMP-AUD-007</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shrink-0 font-medium">Belum Dipindai</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">Mixer Audio Yamaha MG16XU 16-Ch</h2>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline text-[20px]">search_off</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">location_searching</span>
+<span class="truncate">Master Lokasi: Aula Utama SMP (Foyer Audio)</span>
+</div>
+<div class="flex items-center gap-1.5 text-error font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px] shrink-0">error</span>
+<span>Belum terdeteksi dalam 2 hari siklus pindai aktif.</span>
+</div>
+<div class="pt-1">
+<button class="w-full h-9 px-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-dim font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">radar</span>
+          Lacak Lokasi Terakhir &amp; Log Petugas
+        </button>
+</div>
+</div>
+</div>
+<!-- Ambient Floating Action Button for Unlabeled Discovery -->
+<div class="sticky bottom-20 z-30 flex justify-center w-full pointer-events-none mt-2">
+<button class="pointer-events-auto shadow-xl bg-primary text-on-primary hover:bg-primary-container px-space-lg py-2.5 rounded-full flex items-center gap-2 font-label-md text-label-md font-semibold transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>+ Lapor Aset Tanpa Label / Temuan Liar</span>
+</button>
+</div>
+</div>
+<script>
+  function filterDiscrepancy(category, clickedBtn) {
+    const buttons = document.querySelectorAll('#filterTabGroup .tab-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+      btn.classList.add('text-on-surface-variant');
+    });
+
+    clickedBtn.classList.remove('text-on-surface-variant');
+    clickedBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs', 'font-semibold');
+
+    const cards = document.querySelectorAll('#cardsContainer .item-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-semibold"><div class="relative flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="daftar-aset" href="#"><span class="material-symbols-outlined text-[22px]">format_list_bulleted</span><span class="font-label-sm text-label-sm mt-0.5">Daftar Aset</span></a><div class="relative -top-5 flex flex-col items-center justify-center"><a class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/30 transition-transform active:scale-95 text-on-primary" data-path="scan-audit" href="#"><span class="material-symbols-outlined text-[28px]">qr_code_scanner</span></a><span class="font-label-sm text-label-sm text-primary font-semibold mt-1">Scan</span></div><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="discrepancy-temuan" href="#"><span class="material-symbols-outlined text-[22px]">warning</span><span class="font-label-sm text-label-sm mt-0.5">Temuan</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="profil-sesi" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm mt-0.5">Profil/Sesi</span></a></div></nav></body></html>
