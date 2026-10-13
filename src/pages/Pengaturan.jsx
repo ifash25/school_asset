@@ -7,12 +7,12 @@ import { UsersTable } from './setUsers';
 import { Matrix, Locations, RoleOptions, UnitOptions } from './setMeta';
 
 export function Pengaturan() {
-  const { store, setStore, me, toast } = useApp();
+  const { store, me, toast, addUser } = useApp();
   const [form, setForm] = useState({ name: '', user: '', role: 'admin_unit', unit: 'smk' });
   const manage = can(me, 'user.manage');
-  const add = () => {
+  const add = async () => {
     if (!form.name.trim() || !form.user.trim()) { toast('Lengkapi nama & username'); return; }
-    setStore((s) => ({ ...s, extraUsers: [...(s.extraUsers || []), { username: form.user.trim(), pass: '123456', name: form.name.trim(), role: form.role, unit: form.unit }] }));
+    await addUser({ username: form.user.trim(), pass: '123456', name: form.name.trim(), role: form.role, unit: form.unit });
     setForm({ name: '', user: '', role: 'admin_unit', unit: 'smk' });
     toast('Pengguna dibuat (sandi: 123456)');
   };

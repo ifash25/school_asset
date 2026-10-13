@@ -1,8 +1,19 @@
 import { useApp } from '../lib/AppContext';
+import { isSupabaseConfigured } from '../lib/supabase';
 import { Icon } from './Icon';
 
+export function DbBadge() {
+  const { dbReady } = useApp();
+  if (!isSupabaseConfigured) {
+    return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-low text-mut text-[11px] font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-out"></span>Local Mode</span>;
+  }
+  return dbReady
+    ? <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-low text-primary text-[11px] font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Supabase Live</span>
+    : <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-low text-second text-[11px] font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-scont animate-pulse"></span>Menghubungkan…</span>;
+}
+
 export function Banner({ onExportPdf, onExportXlsx }) {
-  const { toast, me } = useApp();
+  const { toast, me, missingTables } = useApp();
   const name = me?.name || 'Bapak/Ibu';
   const doExport = (k) => {
     if (k === 'pdf' && onExportPdf) return onExportPdf();
@@ -10,6 +21,7 @@ export function Banner({ onExportPdf, onExportXlsx }) {
     toast(k === 'pdf' ? 'Menyusun PDF eksekutif...' : 'Mengekspor Buku Induk .XLSX...');
   };
   return (
+    <>
     <div className="card p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
       <div>
         <div className="flex items-center gap-2 text-[12px]">
@@ -17,6 +29,7 @@ export function Banner({ onExportPdf, onExportXlsx }) {
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
             Konsolidasi Terpusat
           </span>
+          <DbBadge />
           <span className="text-mut">Update Otomatis: Hari ini, 08:45 WIB</span>
         </div>
         <h1 className="font-jakarta text-[20px] font-bold mt-2">Assalamu&rsquo;alaikum, {name}</h1>
@@ -29,6 +42,17 @@ export function Banner({ onExportPdf, onExportXlsx }) {
         <ExportMenu onExport={doExport} />
       </div>
     </div>
+    {missingTables && missingTables.length > 0 && (
+      <div className="card p-4 border-l-4 border-err bg-[#fff5f4]">
+        <div className="text-[13px] font-bold text-err">Tabel Supabase belum dibuat: {missingTables.join(', ')}</div>
+        <div className="text-[12px] text-mut mt-1">
+          1) Buka Supabase Dashboard project <b>nspxynbsjoeyujhlvtjp</b> &gt; SQL Editor &gt; New Query.
+          2) Copy-paste isi file <b>supabase-schema.sql</b> di root project lalu Run.
+          3) Refresh halaman ini — badge akan berubah menjadi Supabase Live.
+        </div>
+      </div>
+    )}
+    </>
   );
 }
 

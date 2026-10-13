@@ -4,21 +4,18 @@ import { UNITS } from '../lib/store';
 import { can } from '../lib/auth';
 
 export function AssetModal({ open, onClose }) {
-  const { store, setStore, me, toast } = useApp();
+  const { me, toast, addAsset } = useApp();
   const [form, setForm] = useState({ nama: '', unit: me?.unit !== 'all' ? me?.unit || 'smk' : 'smk', room: '', val: '' });
   if (!open) return null;
-  const save = (e) => {
+  const save = async (e) => {
     e.preventDefault();
     if (!can(me, 'aset.create')) { toast('Akses ditolak: hanya Admin Unit & Super Admin'); return; }
     const n = (form.nama || '').trim();
     if (!n) return;
     const u = form.unit;
     const c = u.toUpperCase().slice(0, 3) + '-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
-    setStore((s) => ({
-      ...s,
-      assets: [{ code: c, name: n, unit: u, room: form.room || 'Gudang', cat: 'Elektronik & TIK', value: Number(form.val || 0), cond: 'baik', fund: 'Yayasan', icon: 'inventory_2' }, ...s.assets],
-      activities: [{ t: 'Registrasi Aset Baru', time: 'Baru saja', d: `${n} (${c})`, m: me?.name || 'Admin' }, ...s.activities],
-    }));
+    const row = { code: c, name: n, unit: u, room: form.room || 'Gudang', cat: 'Elektronik & TIK', value: Number(form.val || 0), cond: 'baik', fund: 'Yayasan', icon: 'inventory_2' };
+    await addAsset(row, { t: 'Registrasi Aset Baru', time: 'Baru saja', d: `${n} (${c})`, m: me?.name || 'Admin' });
     onClose();
     setForm({ nama: '', unit: u, room: '', val: '' });
     toast(`Aset ${c} tersimpan`);
@@ -45,14 +42,11 @@ export function AssetModal({ open, onClose }) {
 }
 
 export function ScanModal({ open, onClose }) {
-  const { store, setStore, toast } = useApp();
+  const { store, toast, addActivity } = useApp();
   const [code, setCode] = useState(store.assets[0]?.code || '');
   if (!open) return null;
-  const verify = () => {
-    setStore((s) => ({
-      ...s,
-      activities: [{ t: 'Audit Ruangan Selesai', time: 'Baru saja', d: `Scan ${code} cocok.`, m: 'Tim Internal' }, ...s.activities],
-    }));
+  const verify = async () => {
+    await addActivity({ t: 'Audit Ruangan Selesai', time: 'Baru saja', d: `Scan ${code} cocok.`, m: 'Tim Internal' });
     onClose();
     toast(`Scan ${code} cocok`);
   };
